@@ -67,3 +67,9 @@ const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
+
+
+app.use(cors({
+  origin: 'https://ai-contract-analysis-platform.onrender.com',  // Frontend URL
+  credentials: true,
+}));
